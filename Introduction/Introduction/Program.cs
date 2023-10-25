@@ -1,7 +1,8 @@
 ﻿//#define CONSOLE_PARAMETERS
 //#define STRING_OPERATIONS
 //#define DATA_TYPES
-#define LITERALS
+//#define LITERALS
+//#define TYPE_CONVERSIONS
 
 using System;
 using System.Collections.Generic;
@@ -61,8 +62,16 @@ namespace Introduction
 			#endregion
 
 			#region NUMERIC_TYPES
-			//Console.WriteLine(sizeof(int));
-			//Console.WriteLine(int.MinValue + " ... " + int.MaxValue);
+			Console.WriteLine(sizeof(int));
+			Console.WriteLine(int.MinValue + " ... " + int.MaxValue);
+			Console.WriteLine(delimiter);
+			Console.WriteLine(
+				$"Переменная типа {typeof(int)} занимает {sizeof(int)} Байт,\n" +
+				$"и принимает значения в диапазоне:{int.MinValue} ... {int.MaxValue};");
+			Console.WriteLine(
+				$"Переменная типа {typeof(uint)} занимает {sizeof(uint)} Байт,\n" +
+				$"и принимает значения в диапазоне:{uint.MinValue} ... {uint.MaxValue};");
+			Console.WriteLine(delimiter);
 			Console.WriteLine(
 				$"Переменная типа {typeof(float)} занимает {sizeof(float)} Байт,\n" +
 				$"и принимает значения в диапазоне:{float.MinValue} ... {float.MaxValue};");
@@ -99,6 +108,24 @@ namespace Introduction
 
 			Console.WriteLine('+'.GetType());
 #endif
+
+#if TYPE_CONVERSIONS
+			//(type)value; - C-like notation (С-подобная форма записи)
+			//type(value); - Functional notation (Функциональная форма записи, в C# НЕ используется)
+			//expression - выражение 2+3
+			//(type)(2+3)
+			//(type)(expression)
+			int a = 2;
+			uint b = (uint)a;
+			int c = (int)b;
+			//int (Integer - Целое число) +-
+			//uint - Unsigned Integer (Беззнаковое целое число) только +  
+#endif
+			int i = 3;
+
+			i = i++ + ++i;
+
+			Console.WriteLine(i);
 		}
 
 		static readonly string delimiter = "\n------------------------------------------\n";
