@@ -7,6 +7,7 @@ https://github.com/Valafff/C-_CodePageEncoding.git
 TODO:
 1. Написать игру "Snake";
 2. Написать игру "Pacman";
+3. Добить калькулятор;
 
 TODO:
 1. Написать калькулятор, который вычисляет выражения вида:
