@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calc", "Calc\Calc.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shooter", "Shooter\Shooter.csproj", "{052B02F8-802C-4E80-AE99-C8EA965BA9E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shooter2", "Shooter2\Shooter2.csproj", "{2FC97BE0-06D1-49A4-91C4-862E76A2D17A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{052B02F8-802C-4E80-AE99-C8EA965BA9E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{052B02F8-802C-4E80-AE99-C8EA965BA9E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{052B02F8-802C-4E80-AE99-C8EA965BA9E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FC97BE0-06D1-49A4-91C4-862E76A2D17A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FC97BE0-06D1-49A4-91C4-862E76A2D17A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FC97BE0-06D1-49A4-91C4-862E76A2D17A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FC97BE0-06D1-49A4-91C4-862E76A2D17A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
