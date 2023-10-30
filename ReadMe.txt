@@ -8,6 +8,7 @@ TODO:
 1. Happy weekend: 
 	https://legacy.cplusplus.com/reference/stl/
 	https://github.com/okovtun/PV_321_CS/blob/master/GAI%20DZ_PS_C%2B%2B_nedelya_09.pdf
+2. Для зубчатого массива найти: сумму, среднее-арифметическое, минимальное и максимальное значения;
 
 TODO:
 1. Написать игру "Snake";
