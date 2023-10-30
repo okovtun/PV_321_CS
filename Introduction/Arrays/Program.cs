@@ -10,8 +10,8 @@ namespace Arrays
 	{
 		static void Main(string[] args)
 		{
-			Console.Write("Введите размер массива: ");
-			int n = Convert.ToInt32(Console.ReadLine());
+			//Console.Write("Введите размер массива: ");
+			int n = 5;// Convert.ToInt32(Console.ReadLine());
 			int[] arr = new int[n];
 
 			Random rand = new Random(0);
@@ -30,6 +30,13 @@ namespace Arrays
 				Console.Write(i + "\t");
 			}
 			Console.WriteLine();
+
+			int sum = 0;
+			foreach (int i in arr)
+			{
+				sum += i;
+			}
+			Console.WriteLine("Сумма элементов массива: " + sum);
 		}
 	}
 }

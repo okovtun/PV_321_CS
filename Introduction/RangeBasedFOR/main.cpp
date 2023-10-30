@@ -5,11 +5,15 @@ using std::cin;
 using std::cout;
 using std::endl;
 
+#define RANGE_BASED_FOR_ARRAY
+#define STL_MAP
+
 void main()
 {
 	setlocale(LC_ALL, "");
-	/*int arr[] = { 3, 5, 8, 13, 21 };
-	for (int i = 0; i < sizeof(arr)/sizeof(arr[0]); i++)
+#ifdef RANGE_BASED_FOR_ARRAY
+	int arr[] = { 3, 5, 8, 13, 21 };
+	for (int i = 0; i < sizeof(arr) / sizeof(arr[0]); i++)
 	{
 		cout << arr[i] << "\t";
 	}
@@ -18,8 +22,10 @@ void main()
 	{
 		cout << i << "\t";
 	}
-	cout << endl;*/
+	cout << endl;
+#endif // RANGE_BASED_FOR_ARRAY
 
+#ifdef STL_MAP
 	std::map<int, std::string> week =
 	{
 		{0, "Sunday"},
@@ -41,4 +47,6 @@ void main()
 		cout << i.first << " - " << i.second << endl;
 	}
 	cout << endl;
+#endif // STL_MAP
+
 }
