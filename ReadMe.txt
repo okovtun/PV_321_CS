@@ -5,6 +5,18 @@ ASCII:
 https://github.com/Valafff/C-_CodePageEncoding.git
 
 TODO:
+1. В Бинарное дерево добавить следующие методы:
+	??? minValue(???);
+	??? maxValue(???);
+	??? sum(???);
+	??? count(???);
+	??? avg(???);
+	??? clear(???);
+	??? erase(???);
+	??? depth(???);
+2. На базе Дерева создать уникальное Бинарное дерево;
+
+TODO:
 1. Happy weekend: 
 	https://legacy.cplusplus.com/reference/stl/
 	https://github.com/okovtun/PV_321_CS/blob/master/GAI%20DZ_PS_C%2B%2B_nedelya_09.pdf
