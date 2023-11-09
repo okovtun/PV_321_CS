@@ -170,11 +170,14 @@ private:
 	int depth(Element* Root) const
 	{
 		if (Root == nullptr)return 0;
-		else return
+		/*else return
 			depth(Root->pLeft)  + 1 >
 			depth(Root->pRight) + 1 ?
 			depth(Root->pLeft)  + 1 :
-			depth(Root->pRight) + 1 ;
+			depth(Root->pRight) + 1 ;*/
+		int l_depth = depth(Root->pLeft) + 1;
+		int r_depth = depth(Root->pRight) + 1;
+		return l_depth > r_depth ? l_depth : r_depth;
 	}
 	void print(Element* Root)const
 	{
@@ -219,18 +222,47 @@ void main()
 	int n;
 	cout << "Введите расмер дерева: "; cin >> n;
 	Tree tree;
+	clock_t start = clock();
 	for (int i = 0; i < n; i++)
 	{
 		tree.insert(rand() % 100);
 	}
+	clock_t end = clock();
+	cout << "Дерево заполнено за " << double(end - start) / CLOCKS_PER_SEC << " секунд.\n";
 	//tree.print();
 	cout << endl;
-	cout << "Минимальное значение в дереве: " << tree.minValue() << endl;
-	cout << "Максимальное значение в дереве: " << tree.maxValue() << endl;
-	cout << "Сумма элементов дерева: " << tree.sum() << endl;
-	cout << "Количество элементов дерева: " << tree.count() << endl;
-	cout << "Среднее-арифметическое элементов дерева: " << tree.avg() << endl;
-	cout << "Глубина дерева: " << tree.depth() << endl;
+	cout << "Минимальное значение в дереве: ";
+	start = clock();
+	cout << tree.minValue() << "\t";
+	end = clock();
+	cout << "выполнено за " << double(end - start) / CLOCKS_PER_SEC << " секунд.\n";
+	/////////////////////////////////////////////////////////////
+	start = clock();
+	cout << "Максимальное значение в дереве: " << tree.maxValue() << "\t";
+	end = clock();
+	cout << "выполнено за " << double(end - start) / CLOCKS_PER_SEC << " секунд.\n";
+	/////////////////////////////////////////////////////////////
+	start = clock();
+	cout << "Сумма элементов дерева: " << tree.sum() << "\t";
+	end = clock();
+	cout << "выполнено за " << double(end - start) / CLOCKS_PER_SEC << " секунд.\n";
+	/////////////////////////////////////////////////////////////
+	start = clock();
+	cout << "Количество элементов дерева: " << tree.count() << "\t";
+	end = clock();
+	cout << "выполнено за " << double(end - start) / CLOCKS_PER_SEC << " секунд.\n";
+	/////////////////////////////////////////////////////////////
+	start = clock();
+	cout << "Среднее-арифметическое элементов дерева: " << tree.avg() << "\t";
+	end = clock();
+	cout << "выполнено за " << double(end - start) / CLOCKS_PER_SEC << " секунд.\n";
+	/////////////////////////////////////////////////////////////
+	cout << "Глубина дерева: ";
+	start = clock();
+	cout << tree.depth() << "\t";
+	end = clock();
+	cout << "выполнено за " << double(end - start) / CLOCKS_PER_SEC << " секунд.\n";
+	/////////////////////////////////////////////////////////////
 
 	UniqueTree u_tree;
 	for (int i = 0; i < n; i++)
