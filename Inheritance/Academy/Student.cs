@@ -25,5 +25,30 @@ namespace Academy
 			Attendance = attendance;
 			Console.WriteLine("SConstructor:\t" + GetHashCode());
 		}
+		public Student(Human human, string speciality, string group, double rating, double attendance) : base(human)
+		{
+			Speciality = speciality;
+			Group = group;
+			Rating = rating;
+			Attendance = attendance;
+			Console.WriteLine("SConstructor:\t" + GetHashCode());
+		}
+		public Student(Student other) : base(other)	//Upcast - это преобразование объекта дочернего класса в объект базового класса.
+		{                                           //Благодаря Upcast можно выполнять Generalisation (обобщение)
+			this.Speciality = other.Speciality;
+			this.Group = other.Group;
+			this.Rating = other.Rating;
+			this.Attendance = other.Attendance;
+			Console.WriteLine("SConstructor:\t" + GetHashCode());
+		}
+		~Student()
+		{
+			Console.WriteLine("SDestructor:\t" + GetHashCode());
+		}
+
+		public override string ToString()
+		{
+			return base.ToString() + $" {Speciality} {Group} {Rating} {Attendance}";
+		}
 	}
 }
